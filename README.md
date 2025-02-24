@@ -78,7 +78,7 @@ graph TD
 
 ```bash
 git clone https://github.com/mattseidel/WordDiff-Pro.git
-cd text-comparison-project
+cd WordDiff-Pro
 ```
 
 2. Install dependencies:
@@ -93,7 +93,7 @@ npm install
 npm run dev
 ```
 
-The project uses **Vite**, so the application will run at `http://localhost:3000` (or the configured port).
+The project uses **Vite**, so the application will run at `http://localhost:5173` (or the configured port).
 
 ---
 
