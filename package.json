@@ -1,0 +1,25 @@
+{
+  "name": "worddiff-pro",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/diff": "^7.0.1",
+    "@types/json-diff": "^1.0.3",
+    "typescript": "~5.7.2",
+    "vite": "^6.1.0"
+  },
+  "dependencies": {
+    "diff": "^7.0.0",
+    "diff-json": "^2.0.0",
+    "html2pdf.js": "^0.10.2",
+    "quill": "^2.0.3",
+    "quill-delta-to-html": "^0.12.1",
+    "rxjs": "^7.8.1"
+  }
+}

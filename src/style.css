@@ -1,0 +1,58 @@
+#pageContainer {
+  height: 60%;
+}
+
+.page {
+  height: 100%;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+.item{
+  display: inline-block;
+}
+
+.delete {
+  background: #ff6347;
+  color: white;
+}
+
+.add {
+  background: #009975;
+  color: white;
+}
+
+.ql-editor[contenteditable="false"] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.ql-editor:disabled {
+  background: #ccc !important;
+  cursor: not-allowed !important;
+}
+
+.page-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.save-button {
+  background-color: #009975;
+  color: #fff;
+}
+
+.save-button:hover {
+  background-color: #007d66;
+}
+
+.cancel-button {
+  background-color: #ff6347;
+  color: #fff;
+}
+
+.cancel-button:hover {
+  background-color: #ff4d32;
+}

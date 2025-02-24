@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ionic Web Components SPA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/src/style.css" />
+
+    <!-- Load Ionic's ES modules and non-module bundles from a CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+
+    <!-- Load the Ionic CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Basic CSS to show/hide pages */
+      .page {
+        display: none;
+        padding: 1rem;
+      }
+      .page.active {
+        display: block;
+      }
+      /* Optional: style the container for a little spacing */
+      #pageContainer {
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Ionic's top-level app component -->
+    <ion-app>
+      <!-- Header -->
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Concourse Contract Editor</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <!-- Main content area -->
+      <ion-content>
+        <!-- A segment control used as a navigation bar -->
+        <ion-segment value="create" id="navSegment">
+          <ion-segment-button value="create">
+            <ion-label>Start</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="edit">
+            <ion-label>Edit</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="review">
+            <ion-label>Review</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="complete">
+            <ion-label>Complete</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+
+        <!-- Container holding the "pages" -->
+        <div id="pageContainer">
+          <div id="create" class="page active">
+            <div class="page-header">
+              <h2>Create Contract</h2>
+
+              <ion-button class="btn save-button" id="save-button"
+                >Save</ion-button
+              >
+              <ion-alert
+                trigger="save-button"
+                header="The Created Contract"
+                sub-header="has been saved"
+                message="Please proceed to the next step"
+                buttons='["OK"]'
+              ></ion-alert>
+            </div>
+            <div id="create-editor"></div>
+          </div>
+          <div id="edit" class="page">
+            <div class="page-header">
+              <h2>Edit Contract</h2>
+
+              <ion-button class="btn save-button" id="save-edit-button"
+                >Save</ion-button
+              >
+              <ion-alert
+                trigger="save-edit-button"
+                header="The edit Contract"
+                sub-header="has been saved"
+                message="Please proceed to the next step"
+                buttons='["OK"]'
+              ></ion-alert>
+            </div>
+            <div id="edit-editor"></div>
+          </div>
+          <div id="review" class="page">
+            <div class="page-header">
+              <h2>Review Page</h2>
+              <ion-button id="btn-get-text" class="btn-get-text"
+                >Get Text</ion-button
+              >
+            </div>
+            <div id="diff"></div>
+            <!-- Changed this to have a proper ID for displaying differences -->
+          </div>
+          <div id="complete" class="page">
+            <h2>Contract Complete</h2>
+            <div id="final-text"></div>
+          </div>
+        </div>
+      </ion-content>
+    </ion-app>
+
+    <script type="module" src="/src/main.ts"></script>
+    <!-- Include the Quill library -->
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+  </body>
+</html>
