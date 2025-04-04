@@ -4,6 +4,12 @@
 This project allows you to visualize and export text differences using a hexagonal architecture. It focuses on word-by-word text comparison, highlighting changes and providing the ability to export them in different formats.
 
 ---
+## 🌐 **Live Version**
+
+You can access the live version of the project here:
+👉 [Word Diff Pro - Live Demo](https://word-diff-pro-git-main-matthew-seidels-projects-97006f3e.vercel.app)
+
+---
 
 ## 📚 **Technologies Used**
 
@@ -72,7 +78,7 @@ graph TD
 
 ```bash
 git clone https://github.com/mattseidel/WordDiff-Pro.git
-cd text-comparison-project
+cd WordDiff-Pro
 ```
 
 2. Install dependencies:
@@ -87,7 +93,7 @@ npm install
 npm run dev
 ```
 
-The project uses **Vite**, so the application will run at `http://localhost:3000` (or the configured port).
+The project uses **Vite**, so the application will run at `http://localhost:5173` (or the configured port).
 
 ---
 
